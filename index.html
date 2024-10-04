@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Corriente</title>
+    <link href="estilos.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="imagen">
+        <img src="PAGINA3.png" alt="resistencia">
+    </div>
+    <div class="container">
+        <h2>Cálculo de Corriente</h2>
+
+        <form id="calculoForm">
+            <label for="resistencia">Valor de la resistencia:</label>
+            <div class="input-group">
+                <input type="number" name="resistencia" id="resistencia" required>
+                <select name="valor" id="valor">
+                    <option value="ohms">Ohms</option>
+                    <option value="kohms">Kiloohms</option>
+                </select>
+            </div>
+            <label for="voltaje">Valor del voltaje (V):</label>
+            <div class="input-group">
+                <input type="number" name="voltaje" id="voltaje" value="5" readonly>
+            </div>
+            <input type="submit" value="Calcular">
+        </form>
+    </div>
+
+    <div id="modalxd" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('modalxd').style.display='none'">&times;</span>
+            <p id="resultadoTexto"></p>
+        </div>
+    </div>
+
+    <script src="funcion.js"></script>
+</body>
+</html>
